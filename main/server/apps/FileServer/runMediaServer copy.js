@@ -1,0 +1,1 @@
+const mediaServer = require('./index')();

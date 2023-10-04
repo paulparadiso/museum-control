@@ -1,0 +1,139 @@
+---
+meta:
+  label: "PlaybackPro"
+  defaultPort: 4647
+messages:
+  previousClip:
+    message: "PR"
+    response: false
+  nextClip:
+    message: "NX"
+    response: false
+  clearPreview:
+    message: "CL"
+    response: false
+  loadClipPreview:
+    message: "GO$1"
+    response: false
+    arg: "clip"
+  loadClipTake:
+    message: "GT$1"
+    response: false
+    arg: "clip"
+  take:
+    message: "TA"
+    response: false
+  endAll:
+    message: "EA"
+    response: false
+  goto10:
+    message: "10"
+    response: false
+  goto20:
+    message: "20"
+    response: false
+  goto30:
+    message: "30"
+    response: false
+  loopProgram:
+    message: "SL"
+    response: false
+  unloopProgram:
+    message: "EL"
+    response: false
+  gotoElapsedTime:
+    message: "GE$1"
+    reponse: false
+    arg: "time"
+  gotoRemainingTime:
+    message: "GR$1"
+    response: false
+    arg: "time"
+  pause:
+    message: "PA"
+    response: false
+  resume:
+    message: "PL"
+    response: false
+  programClipName:
+    message: "GN"
+    response: true
+    match: /*/
+    success: "$1"
+    failure: null
+  programClipNumber:
+    message: "GU"
+    response: true
+    match: /*/
+    success: "$1"
+    failure: null
+  programClipDuration:
+    message: "GD"
+    response: true
+    match: /*/
+    success: "$1"
+    failure: null
+  previewClipName:
+    message: "VN"
+    response: true
+    match: /*/
+    success: "$1"
+    failure: null
+  previewClipNumber:
+    message: "VU"
+    response: true
+    match: /*/
+    success: "$1"
+    failure: null
+  previewClipDuration:
+    message: "VD"
+    response: true
+    match: /*/
+    success: "$1"
+    failure: null
+  programTimeElapsed:
+    message: "TE"
+    response: true
+    match: /*/
+    success: "$1"
+    failure: null
+  playbackStatus:
+    message: "TE"
+    response: true
+    match: /*/
+    success: "$1"
+    failure: null
+  loopStatus:
+    message: "TE"
+    response: true
+    match: \bYES\b
+    success: 1
+    failure: 0
+  allClipNames:
+    message: "AN"
+    response: true
+    match: /*/
+    success: "$1"
+    failure: null
+  allClipNumbers:
+    message: "AU"
+    response: true
+    match: /*/
+    success: "$1"
+    failure: null
+  allClipDurations:
+    message: "AD"
+    response: true
+    match: /*/
+    success: "$1"
+    failure: null
+  takeClipByID:
+    message: "TI$1"
+    response: false
+    arg: "id"
+  returnClipIDs:
+    message: "ID"
+    response: true
+    match: /*/
+    success: "$1"
+    failure: null

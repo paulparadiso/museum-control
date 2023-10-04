@@ -1,0 +1,25 @@
+{
+    "configs": {
+        "three": {
+            "mongodb_uri": "mongodb://12.23.42.1:27017",
+            "mongodb_user": "admin",
+            "mongodb_pass": "boogie",
+            "mqtt_broker": "localhost",
+            "mqtt_port": "1880"
+        },
+        "hello": {
+            "mongodb_uri": "mongodb://mongo:27017",
+            "mongodb_user": "one",
+            "mongodb_pass": "two",
+            "mqtt_broker": "http://2.3.32.12",
+            "mqtt_port": "9902"
+        },
+        "local": {
+            "mongodb_uri": "mongodb://localhost:27017",
+            "mongodb_user": "",
+            "mongodb_pass": "",
+            "mqtt_broker": "",
+            "mqtt_port": ""
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "node-red-contrib-nec-monitor",
+  "node-red": {
+    "nodes": {
+      "christie-projector": "nec-monitor.js"
+    }
+  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "js-yaml": "^4.0.0",
+    "promise-socket": "^7.0.0",
+    "yaml": "^2.0.0-3"
+  }
+}

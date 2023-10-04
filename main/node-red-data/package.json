@@ -1,0 +1,20 @@
+{
+    "name": "node-red-project",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "node-red-contrib-allenandheath": "~1.4.2",
+        "node-red-contrib-cron-plus": "~1.5.7",
+        "node-red-contrib-fred": "0.0.6",
+        "node-red-contrib-globalcache": "~0.4.0",
+        "node-red-contrib-jsonrpc3": "~0.0.3",
+        "node-red-contrib-snmp-trap-listener": "~2.4.0",
+        "node-red-contrib-string": "~1.0.0",
+        "node-red-contrib-telnet-client": "~1.0.4",
+        "node-red-contrib-uibuilder": "~5.1.1",
+        "node-red-dashboard": "~3.5.0",
+        "node-red-node-base64": "~0.3.0",
+        "ubidots-nodered": "~2.0.2"
+    }
+}

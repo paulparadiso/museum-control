@@ -1,0 +1,69 @@
+version: '3'
+services: 
+    nginx:
+        image: nginx:latest
+        volumes:
+            - ./logs:/var/logs/nginx
+            - ./dashboard/build:/usr/share/nginx/html
+        ports:
+            - 80:80
+            - 443:443
+    node:
+        build:
+            context: ./dashboard-server
+        environment:
+            - NODE_ENV=production
+            - TZ=America/New_York
+            - MQTT_BROKER=localhost
+            - SERVER_ADDR=localhost
+        command:
+            sh -c "ln -snf /usr/share/zoneinfo/$${TZ} /etc/localtime &&
+            echo America/$${TZ} > /etc/timezone &&
+            cd /home/node/apps &&
+            node install.js &&
+            node . 
+            "
+        volumes:
+            - ./apps:/home/node/apps
+        ports:
+            - "3001:3001"
+            - "3002:3002"
+        stdin_open: true
+        tty: true
+    file-server:
+        build:
+            context: ./file-server
+        environment:
+            MONGO_HOST: mongo
+        ports:
+            - 3000:3000
+    mongo:
+        image: mongo
+        container_name: mongo
+        restart: always
+        environment:
+            MONGO_INITDB_DATABASE: srgm
+            MONGO_INITDB_ROOT_USERNAME: admin
+            MONGO_INITDB_ROOT_PASSWORD: admin
+        ports:
+            - 27017:27017
+        volumes:
+            - ./mongo-data:/data/db
+    node-red:
+        image: nodered/node-red
+        volumes:
+            - ./node-red-data:/data
+            - ./node-red-dev:/node-dev
+        ports:
+            - "1880:1880"
+        stdin_open: true
+        tty: true
+    mosquitto:
+        image: eclipse-mosquitto
+        ports:
+            - "1883:1883"
+            - "8883:8883"
+        volumes:
+            - ./mosquitto/data:/mosquitto/data
+            - ./mosquitto/logs:/mosquitto/logs
+            - ./mosquitto/config:/mosquitto/config

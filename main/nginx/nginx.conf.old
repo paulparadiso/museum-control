@@ -1,0 +1,67 @@
+server {
+
+    listen 80;
+
+    server_name strapi;
+
+    location /api {
+        proxy_pass http://node:3001;
+    }
+
+    location /strapi {
+        proxy_pass http://strapi:1337/;
+    }
+
+    location /assets {
+        proxy_pass http://strapi:1337;
+    }
+
+    location /admin {
+        proxy_pass http://strapi:1337;
+    }
+
+    location /content-manager {
+        proxy_pass http://strapi:1337;
+    }
+
+    location /i18n {
+        proxy_pass http://strapi:1337;
+    }
+
+    location /red {
+        proxy_pass http://node-red:1880/red;
+    }
+
+    location /vendor {
+        proxy_pass http://node-red:1880/vendor;
+    }
+
+    location /locales {
+        proxy_pass http://node-red:1880/locales;
+    }
+
+    location /settings {
+        proxy_pass http://node-red:1880/settings;    
+    }
+
+    location /ui {
+        proxy_pass http://node-red:1880/ui;
+    }
+
+    location /nodered {
+        proxy_pass http://node-red:1880/;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Host $host;
+        proxy_set_header X-Forwarded-Port $server_port;
+    }
+
+    location / {
+        root /usr/share/nginx/html;
+        index index.html index.htm;
+        try_files $uri $uri/ /index.html =404;
+    }
+}

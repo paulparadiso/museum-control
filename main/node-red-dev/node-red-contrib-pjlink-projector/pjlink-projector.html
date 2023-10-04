@@ -1,0 +1,42 @@
+<script type="text/javascript">
+    RED.nodes.registerType('pjlink-projector', {
+        category: 'function',
+        color: '#ffaaaa',
+        defaults: {
+            name: {value:"PJLink"},
+            ip: {value: "XXX.XXX.XXX.XXX"},
+            port: {value: 4352},
+            password: {value: "JBMIAProjectorLink"}
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "pjlink.png",
+        label: function() {
+            return `${this.name} - ${this.ip}` || "PJLink Projector";
+        },
+        paletteLabel: "PJLink Projector"
+    });
+</script>
+
+<script type="text/html" data-template-name="pjlink-projector">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i>Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-ip"><i class="fa fa-tag"></i>IP</label>
+        <input type="text" id="node-input-ip" placeholder="XXX.XXX.XXX.XXX">
+    </div>
+    <div class="form-row">
+        <label for="node-input-port"><i class="fa fa-tag"></i>Port</label>
+        <input type="text" id="node-input-port" placeholder="4352">
+    </div>
+    <div class="form-row">
+        <label for="node-input-password"><i class="fa fa-tag"></i>Password</label>
+        <input type="text" id="node-input-password" placeholder="JBMIAProjectorLink">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="pjlink-projector">
+    <p>Module to control projectors via PJLink</p>
+</script>

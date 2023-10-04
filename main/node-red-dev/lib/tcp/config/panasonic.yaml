@@ -1,0 +1,30 @@
+---
+meta:
+  label: "Panasonic Projector"
+  defaultPort: 4352
+  ignore: "PJLINK"
+messages:
+  powerStatus: 
+    message: "%1POWR ?"
+    response: true
+    match: \b(PWR!1)\b
+    success: 1
+    failure: 0
+  powerOn: 
+    message: "(PWR 1)"
+    response: false
+  powerOff: 
+    message: "(PWR 0)"
+    response: false
+  shutterStatus: 
+    message: "(SHU?)"
+    response: true
+    match: \b(SHU!01)\b
+    success: 1
+    failure: 0
+  shutterOn: 
+    message: "(SHU 1)"
+    response: false
+  shutterOff: 
+    message: "(SHU 0)"
+    response: false

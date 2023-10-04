@@ -1,0 +1,207 @@
+schedules: 
+  -
+    label: "Special morning hours"
+    tag: "special_morning_hours"
+  -
+    label: "Public hours"
+    tag: "public_hours"
+parts:
+  -
+    label: "Part 1"
+    tag: "part_1"
+  -
+    label: "Part 2"
+    tag: "part_2"
+clips: 
+  -
+    title: "bumper: SOMETIMES IT WAS BEAUTIFUL"
+    description: "bumper: SOMETIMES IT WAS BEAUTIFUL"
+    number: 1
+  -
+    title: "Christian Nyampeta, Sometimes It Was Beautiful"
+    description: "Christian Nyampeta, Sometimes It Was Beautiful"
+    number: 2
+  -
+    title: "bumper: UP NEXT PEOPLE WHO THINK TOGETHER, DANCE TOGETHER #7"
+    description: "bumper: UP NEXT PEOPLE WHO THINK TOGETHER, DANCE TOGETHER #7"
+    number: 3
+  -
+    title: "People Who Think Together, Dance Together #7"
+    description: "People Who Think Together, Dance Together #7"
+    number: 4
+
+part_1:
+  special_morning_hours: 
+    -
+      time: "9:00:00"
+      clip_number: 1
+    -
+      time: "9:00:30"
+      clip_number: 2
+    -
+      time: "9:38:40"
+      clip_number: 4
+    -
+      time: "10:00:30"
+      clip_number: 2
+    -
+      time: "10:38:40"
+      clip_number: 4
+    -
+      time: "11:00:30"
+      clip_number: 2
+    -
+      time: "11:38:40"
+      clip_number: 4
+    -
+      time: "12:00:30"
+      clip_number: 2
+    -
+      time: "12:38:40"
+      clip_number: 4
+    -
+      time: "13:00:30"
+      clip_number: 2
+    -
+      time: "13:38:40"
+      clip_number: 4
+    -
+      time: "14:00:30"
+      clip_number: 2
+  public_hours:
+    -
+      time: "9:00:00"
+      clip_number: 1
+    -
+      time: "9:00:30"
+      clip_number: 2
+    -
+      time: "9:38:40"
+      clip_number: 4
+    -
+      time: "10:00:30"
+      clip_number: 2
+    -
+      time: "10:38:40"
+      clip_number: 4
+    -
+      time: "11:00:30"
+      clip_number: 2
+    -
+      time: "11:38:40"
+      clip_number: 4
+    -
+      time: "12:00:30"
+      clip_number: 2
+    -
+      time: "12:38:40"
+      clip_number: 4
+    -
+      time: "13:00:30"
+      clip_number: 2
+    -
+      time: "13:38:40"
+      clip_number: 4
+    -
+      time: "14:00:30"
+      clip_number: 2
+    -
+      time: "14:38:40"
+      clip_number: 4
+    -
+      time: "15:00:30"
+      clip_number: 2
+    -
+      time: "15:38:40"
+      clip_number: 4
+    -
+      time: "16:00:30"
+      clip_number: 2
+    -
+      time: "16:38:40"
+      clip_number: 4
+    -
+      time: "17:00:30"
+      clip_number: 2
+    -
+      time: "17:38:40"
+      clip_number: 4
+    -
+      time: "18:00:30"
+      clip_number: 2
+    -
+      time: "18:38:40"
+      clip_number: 4
+    -
+      time: "19:00:30"
+      clip_number: 2
+    -
+      time: "19:38:40"
+      clip_number: 4
+    -
+      time: "20:00:30"
+      clip_number: 2
+    -
+      time: "23:51:10"
+      clip_number: 1
+    -
+      time: "23:52:30"
+      clip_number: 2
+    -
+      time: "23:53:40"
+      clip_number: 4
+    -
+      time: "23:55:30"
+      clip_number: 2
+    -
+      time: "23:58:30"
+      clip_number: 4
+part_2:
+  special_morning_hours:
+    -
+      time: "07:00:00"
+      clip_number: 1
+    -
+      time: "07:00:00"
+      clip_number: 2
+    -
+      time: "07:00:00"
+      clip_number: 3
+    -
+      time: "07:00:00"
+      clip_number: 4
+    -
+      time: "07:00:00"
+      clip_number: 5
+  public_hours:
+    -
+      time: "07:00"
+      clip_number: 1
+    -
+      time: "07:00"
+      clip_number: 2
+    -
+      time: "07:00"
+      clip_number: 3
+    -
+      time: "07:00"
+      clip_number: 4
+    -
+      time: "07:00"
+      clip_number: 5
+  special_evening_hours:
+    -
+      time: "07:00"
+      clip_number: 1
+    -
+      time: "07:00"
+      clip_number: 2
+    -
+      time: "07:00"
+      clip_number: 3
+    -
+      time: "07:00"
+      clip_number: 4
+    -
+      time: "07:00"
+      clip_number: 5

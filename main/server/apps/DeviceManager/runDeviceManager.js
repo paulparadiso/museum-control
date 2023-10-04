@@ -1,0 +1,1 @@
+const deviceManager = require('./index')();

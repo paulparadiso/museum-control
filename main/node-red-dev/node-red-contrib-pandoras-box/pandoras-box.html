@@ -1,0 +1,41 @@
+<script type="text/javascript">
+    RED.nodes.registerType('pandoras-box', {
+        category: 'function',
+        color: '#ffaaaa',
+        defaults: {
+            name: {value:"Pandora's Box"},
+            ip: {value: "XXX.XXX.XXX.XXX"},
+            fullscreenid: {value: "X"},
+            windowedid: {value: "X"}
+        },
+        inputs: 1,
+        outputs: 1,
+        label: function() {
+            return `${this.name} - ${this.ip}` || "Pandora's Box";
+        },
+        paletteLabel: "Pandora's Box"
+    });
+</script>
+
+<script type="text/html" data-template-name="pandoras-box">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i>Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-ip"><i class="fa fa-tag"></i>IP</label>
+        <input type="text" id="node-input-ip" placeholder="XXX.XXX.XXX.XXX">
+    </div>
+    <div class="form-row">
+        <label for="node-input-fullscreenid"><i class="fa fa-tag"></i>Fullscreen ID</label>
+        <input type="text" id="node-input-fullscreenid" placeholder="X">
+    </div>
+    <div class="form-row">
+        <label for="node-input-windowedid"><i class="fa fa-tag"></i>Windowed ID</label>
+        <input type="text" id="node-input-windowedid" placeholder="X">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="pandoras-box">
+    <p>Module to control Pandora's Box via TCP</p>
+</script>

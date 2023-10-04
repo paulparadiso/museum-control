@@ -1,0 +1,31 @@
+<script type="text/javascript">
+    RED.nodes.registerType('samsung-monitor', {
+        category: 'function',
+        color: '#ffaaaa',
+        defaults: {
+            name: {value:"Samsung Monitor"},
+            ip: {value: "XXX.XXX.XXX.XXX"}
+        },
+        inputs: 1,
+        outputs: 1,
+        label: function() {
+            return `${this.name} - ${this.ip}` || "Samsung Monitor";
+        },
+        paletteLabel: "Samsung Monitor"
+    });
+</script>
+
+<script type="text/html" data-template-name="samsung-monitor">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i>Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-ip"><i class="fa fa-tag"></i>IP</label>
+        <input type="text" id="node-input-ip" placeholder="XXX.XXX.XXX.XXX">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="samsung-monitor">
+    <p>Module to control Samsung Monitors via TCP</p>
+</script>   

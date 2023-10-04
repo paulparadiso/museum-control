@@ -1,0 +1,20 @@
+{
+    "screens": {
+        "0": {
+            "playlist": [
+                "TESTCARD_60p_1920x1080_h264.mp4"
+            ]
+        }
+    },
+    "interfaces": [
+        {
+            "name": "mqtt",
+            "args": {"topic":"museum/players"}
+        },
+        {
+            "name": "udp",
+            "args": {"port": 8899}
+        }
+    ]
+}
+

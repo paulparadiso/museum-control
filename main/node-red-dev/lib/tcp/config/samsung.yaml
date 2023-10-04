@@ -1,0 +1,18 @@
+---
+meta:
+  label: "Samsung Monitor"
+  defaultPort: 1515
+messages:
+  powerStatus: 
+    message: "\xAA\x11\x01\x00\x12"
+    response: true
+    buffer: true
+    match: {"index": 6, "value": 1}
+    success: 1
+    failure: 0
+  powerOn: 
+    message: "\xAA\x11\xFE\x01\x01\x11"
+    response: false
+  powerOff: 
+    message: "\xAA\x11\xFE\x01\x00\x10"
+    response: false

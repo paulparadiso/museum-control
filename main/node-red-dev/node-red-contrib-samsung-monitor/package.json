@@ -1,0 +1,22 @@
+{
+  "name": "node-red-contrib-samsung-monitor",
+  "node-red": {
+    "nodes": {
+      "samsung-monitor": "samsung-monitor.js"
+    }
+  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "js-yaml": "^4.0.0",
+    "pjlink": "^0.2.4",
+    "promise-socket": "^7.0.0",
+    "yaml": "^2.0.0-3"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "testapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "busboy": "^1.6.0",
+    "connect-busboy": "^1.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-cors": "^0.0.3",
+    "fs-extra": "^11.1.0",
+    "mongoose": "^7.0.0",
+    "mqtt": "^4.3.7",
+    "stream-meter": "^1.0.4"
+  }
+}

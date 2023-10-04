@@ -1,0 +1,12 @@
+{
+    "interfaces": [
+        {
+            "name": "mqtt",
+            "args": {"topics": ["museum/players", "museum/devices/update", "museum/players/sync"], "broker": "172.16.1.72"}
+        },
+        {
+            "name": "udp",
+            "args": {"port": 8899}
+        }
+    ]
+}

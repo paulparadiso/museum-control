@@ -1,0 +1,23 @@
+{
+  "name": "apps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app": "",
+    "all": "nodemon ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect-busboy": "^1.0.0",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.1.1",
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21",
+    "mqtt": "^4.3.7",
+    "node-schedule": "^2.1.0"
+  }
+}

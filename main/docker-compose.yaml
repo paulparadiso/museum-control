@@ -1,0 +1,51 @@
+version: '3'
+services: 
+    node:
+        build:
+           context: ./server
+        ports:
+           - "3333:3333"
+        depends_on:
+            - mongo
+    nginx:
+        build:
+            context: ./nginx
+        volumes:
+            - ./logs:/var/logs/nginx
+            - ./dashboard/build:/usr/share/nginx/html
+        ports:
+            - 80:80
+            - 443:443
+        depends_on:
+            - node
+    mongo:
+        image: mongo
+        container_name: mongo
+        restart: always
+        environment:
+            MONGO_INITDB_DATABASE: srgm
+            MONGO_INITDB_ROOT_USERNAME: admin
+            MONGO_INITDB_ROOT_PASSWORD: admin
+        ports:
+            - 27017:27017
+        volumes:
+            - ./mongo-data:/data/db
+    node-red:
+        image: nodered/node-red
+        volumes:
+            - ./node-red-data:/data
+            - ./node-red-dev:/node-dev
+        ports:
+            - "1880:1880"
+        stdin_open: true
+        tty: true
+    mosquitto:
+        image: eclipse-mosquitto
+        container_name: mosquitto
+        ports:
+            - "1883:1883"
+            - "8883:8883"
+        volumes:
+            - ./mosquitto/data:/mosquitto/data
+            - ./mosquitto/logs:/mosquitto/logs
+            - ./mosquitto/config:/mosquitto/config

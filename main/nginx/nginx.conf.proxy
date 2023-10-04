@@ -1,0 +1,11 @@
+server {
+    listen 80;
+
+    location / {
+        auth_basic "Dashboard";
+        auth_basic_user_file htpasswd/dashboard;
+        proxy_set_header Authorization $http_authorization;
+        proxy_pass_header  Authorization;
+        proxy_pass http://node:3001;    
+    }
+}   
